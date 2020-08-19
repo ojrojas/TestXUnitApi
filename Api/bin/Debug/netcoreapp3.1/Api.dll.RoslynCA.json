@@ -96,27 +96,6 @@
           }
         },
         {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Program.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 18,
-                  "endLine": 12,
-                  "endColumn": 25
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1128",
           "level": "warning",
           "message": "Remove this unnecessary 'using'.",
@@ -401,6 +380,27 @@
                   "startLine": 3,
                   "startColumn": 1,
                   "endLine": 3,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Program.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
                   "endColumn": 25
                 }
               }

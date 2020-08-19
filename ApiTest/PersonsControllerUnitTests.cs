@@ -53,11 +53,11 @@ namespace ApiTest.Tests
             var controller = new PersonsController(new PersonService());
             var newPerson = new Person
             {
-                FirstName = "John",
-                LastName = "Doe",
+                FirstName = "Nicole",
+                LastName = "Garces",
                 Age = 50,
-                Title = "FooBar",
-                Email = "john.doe@foo.bar"
+                Title = "AddPerson",
+                Email = "nicole.garces@addperson.com"
             };
 
             //Act

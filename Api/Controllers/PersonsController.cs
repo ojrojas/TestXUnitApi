@@ -9,7 +9,7 @@ namespace Api.Controllers
     [Route("api/Persons")]
     public class PersonsController : Controller
     {
-        private IPersonService _personService;
+        private readonly IPersonService _personService;
 
         public PersonsController(IPersonService personService)
         {

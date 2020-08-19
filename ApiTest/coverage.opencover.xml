@@ -2,9 +2,9 @@
 <CoverageSession>
   <Summary numSequencePoints="109" visitedSequencePoints="97" numBranchPoints="8" visitedBranchPoints="7" sequenceCoverage="88.99" branchCoverage="87.5" maxCyclomaticComplexity="37" minCyclomaticComplexity="37" visitedClasses="13" numClasses="14" visitedMethods="30" numMethods="33" />
   <Modules>
-    <Module hash="9C6B704F-9216-4762-AB60-336A6EE348A3">
+    <Module hash="CDEC9628-1F02-4019-8E18-05416C037C8B">
       <ModulePath>Api.dll</ModulePath>
-      <ModuleTime>2020-08-19T03:10:09</ModuleTime>
+      <ModuleTime>2020-08-19T03:22:46</ModuleTime>
       <ModuleName>Api</ModuleName>
       <Files>
         <File uid="1" fullPath="/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Program.cs" />

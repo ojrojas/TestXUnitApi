@@ -21,7 +21,7 @@ namespace ApiTest.Tests
 
         public PersonsControllerIntegrationTests()
         {
-            // Arrange
+            //Arrange
             _server = new TestServer(new WebHostBuilder()
             .UseStartup<Startup>());
             _client = _server.CreateClient();
@@ -30,12 +30,12 @@ namespace ApiTest.Tests
         [Fact]
         public async Task Persons_Get_All()
         {
-            // Act
+            //Act
             var response = await _client.GetAsync("/api/Persons");
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
 
-            // Assert
+            //Assert
             var persons = JsonConvert.DeserializeObject<IEnumerable<Person>>(responseString);
             persons.Count().Should().Be(50);
         }
@@ -43,36 +43,36 @@ namespace ApiTest.Tests
         [Fact]
         public async Task Persons_Get_Specific()
         {
-            // Act
+            //Act
             var response = await _client.GetAsync("/api/Persons/16");
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
 
-            // Assert
+            //Assert
             var person = JsonConvert.DeserializeObject<Person>(responseString);
             person.Id.Should().Be(16);
         }
 
         [Fact]
-        public async Task Persons_Post_Specific()
+        public async Task Persons_Post()
         {
-            // Arrange
+            //Arrange
             var personToAdd = new Person
             {
-                FirstName = "John",
-                LastName = "Doe",
+                FirstName = "Vilma",
+                LastName = "Muñoz",
                 Age = 50,
-                Title = "FooBar",
+                Title = "HttpPost",
                 Phone = "001 123 1234567",
-                Email = "john.doe@foo.bar"
+                Email = "vilma.muñoz@httppost.com"
             };
             var content = JsonConvert.SerializeObject(personToAdd);
             var stringContent = new StringContent(content, Encoding.UTF8, "application/json");
 
-            // Act
+            //Act
             var response = await _client.PostAsync("/api/Persons", stringContent);
 
-            // Assert
+            //Assert
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
             var person = JsonConvert.DeserializeObject<Person>(responseString);
@@ -80,17 +80,17 @@ namespace ApiTest.Tests
         }
 
         [Fact]
-        public async Task Persons_Post_Specific_Invalid()
+        public async Task Persons_Post_Invalid()
         {
-            // Arrange
-            var personToAdd = new Person { FirstName = "John" };
+            //Arrange
+            var personToAdd = new Person { FirstName = "Vilma" };
             var content = JsonConvert.SerializeObject(personToAdd);
             var stringContent = new StringContent(content, Encoding.UTF8, "application/json");
 
-            // Act
+            //Act
             var response = await _client.PostAsync("/api/Persons", stringContent);
 
-            // Assert
+            //Assert
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
             var responseString = await response.Content.ReadAsStringAsync();
             responseString.Should().Contain("The Email field is required")
@@ -99,43 +99,43 @@ namespace ApiTest.Tests
         }
 
         [Fact]
-        public async Task Persons_Put_Specific()
+        public async Task Persons_Put()
         {
-            // Arrange
+            //Arrange
             var personToChange = new Person
             {
                 Id = 16,
-                FirstName = "John",
-                LastName = "Doe",
+                FirstName = "Oscar",
+                LastName = "Garces",
                 Age = 50,
-                Title = "FooBar",
+                Title = "HttpPut",
                 Phone = "001 123 1234567",
-                Email = "john.doe@foo.bar"
+                Email = "oscar.garces@httpput.com"
             };
             var content = JsonConvert.SerializeObject(personToChange);
             var stringContent = new StringContent(content, Encoding.UTF8, "application/json");
 
-            // Act
+            //Act
             var response = await _client.PutAsync("/api/Persons/16", stringContent);
 
-            // Assert
+            //Assert
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
             responseString.Should().Be(String.Empty);
         }
 
         [Fact]
-        public async Task Persons_Put_Specific_Invalid()
+        public async Task Persons_Put_Invalid()
         {
-            // Arrange
-            var personToChange = new Person { FirstName = "John" };
+            //Arrange
+            var personToChange = new Person { FirstName = "Oscar" };
             var content = JsonConvert.SerializeObject(personToChange);
             var stringContent = new StringContent(content, Encoding.UTF8, "application/json");
 
-            // Act
+            //Act
             var response = await _client.PutAsync("/api/Persons/16", stringContent);
 
-            // Assert
+            //Assert
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
             var responseString = await response.Content.ReadAsStringAsync();
             responseString.Should().Contain("The Email field is required")
@@ -144,14 +144,14 @@ namespace ApiTest.Tests
         }
 
         [Fact]
-        public async Task Persons_Delete_Specific()
+        public async Task Persons_Delete()
         {
-            // Arrange
+            //Arrange
 
-            // Act
+            //Act
             var response = await _client.DeleteAsync("/api/Persons/16");
 
-            // Assert
+            //Assert
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
             responseString.Should().Be(String.Empty);
