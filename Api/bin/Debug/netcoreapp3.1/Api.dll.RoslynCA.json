@@ -180,6 +180,27 @@
           }
         },
         {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Program.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S1128",
           "level": "warning",
           "message": "Remove this unnecessary 'using'.",
@@ -390,48 +411,6 @@
           }
         },
         {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Program.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 18,
-                  "endLine": 12,
-                  "endColumn": 25
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2933",
-          "level": "warning",
-          "message": "Make '_personService' 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Controllers/PersonsController.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 32,
-                  "endLine": 12,
-                  "endColumn": 46
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S4507",
           "level": "warning",
           "message": "Make sure this debug feature is deactivated before delivering the code in production.",
@@ -479,23 +458,6 @@
           "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1128",
           "properties": {
             "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "SonarWay",
-              "MainSourceScope",
-              "TestSourceScope"
-            ]
-          }
-        },
-        "S2933": {
-          "id": "S2933",
-          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
-          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that's not marked readonly but is only set in the constructor, it could cause confusion about the field's intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
-          "properties": {
-            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",

@@ -1,4 +1,4 @@
-ö(
+Œ)
 T/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Controllers/PersonsController.cs
 	namespace 	
 Api
@@ -38,10 +38,11 @@ Controller
 
 % /
 { 
-private 
-IPersonService 
-_personService -
-;- .
+private 
+readonly 
+IPersonService '
+_personService( 6
+;6 7
 public 
 PersonsController  
 (  !
