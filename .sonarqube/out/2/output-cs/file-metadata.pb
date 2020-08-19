@@ -1,0 +1,9 @@
+]
+T/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Controllers/PersonsController.csutf-8M
+D/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Models/Person.csutf-8G
+>/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Program.csutf-8W
+N/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Services/IPersonService.csutf-8V
+M/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Services/PersonService.csutf-8G
+>/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Startup.csutf-8>
+3/tmp/.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8j
+_/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/obj/Debug/netcoreapp3.1/Api.AssemblyInfo.csutf-8

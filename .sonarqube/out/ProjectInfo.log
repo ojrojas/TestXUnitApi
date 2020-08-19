@@ -1,0 +1,25 @@
+Product projects
+---------------------------------------
+/home/orojasg/Sources/Test/NetCore/TestXunitApi/Api/Api.csproj
+
+
+Test projects
+---------------------------------------
+/home/orojasg/Sources/Test/NetCore/TestXunitApi/ApiTest/ApiTest.csproj
+
+
+Invalid projects
+---------------------------------------
+{none}
+
+
+Skipped projects
+---------------------------------------
+{none}
+
+
+Excluded projects
+---------------------------------------
+{none}
+
+

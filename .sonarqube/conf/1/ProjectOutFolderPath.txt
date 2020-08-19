@@ -1,0 +1,1 @@
+/home/orojasg/Sources/Test/NetCore/TestXunitApi/.sonarqube/out/1
